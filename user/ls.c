@@ -6,6 +6,7 @@
 char*
 fmtname(char *path)
 {
+    printf("before: %s\n",path);
   static char buf[DIRSIZ+1];
   char *p;
 
@@ -19,6 +20,7 @@ fmtname(char *path)
     return p;
   memmove(buf, p, strlen(p));
   memset(buf+strlen(p), ' ', DIRSIZ-strlen(p));
+    printf("after: %s\n",buf);
   return buf;
 }
 
