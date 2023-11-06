@@ -36,6 +36,7 @@ grep(char *pattern, int fd)
 int
 main(int argc, char *argv[])
 {
+    printf("%d\n",getpid());
   int fd, i;
   char *pattern;
 
